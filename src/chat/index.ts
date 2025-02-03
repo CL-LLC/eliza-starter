@@ -1,4 +1,4 @@
-import { settings } from "@elizaos/core";
+import { settings, stringToUuid } from "@elizaos/core";
 import readline from "readline";
 
 const rl = readline.createInterface({
@@ -33,8 +33,15 @@ async function handleUserInput(input, agentId) {
       }
     );
 
-    const data = await response.json();
-    data.forEach((message) => console.log(`${"Agent"}: ${message.text}`));
+    const text = await response.text();
+    let data;
+    try {
+      data = JSON.parse(text);
+    } catch (jsonErr) {
+      throw new Error(text);
+    }
+
+    data.forEach((message) => console.log(`Agent: ${message.text}`));
   } catch (error) {
     console.error("Error fetching response:", error);
   }

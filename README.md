@@ -44,7 +44,12 @@ TWITTER_EMAIL="your@email.com"
 ```bash
 pnpm i && pnpm start
 ```
-Note: this requires node to be at least version 22 when you install packages and run the agent.
+Note: This project requires Node.js version 20.x. If you're using a different version, you can use nvm to switch:
+
+```bash
+nvm install 20
+nvm use 20
+```
 
 ## Run with Docker
 
