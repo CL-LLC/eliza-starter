@@ -3,6 +3,9 @@ dist
 !index.ts
 !character.ts
 .env
+.env.local
+
+
 node_modules
 dist/
 
