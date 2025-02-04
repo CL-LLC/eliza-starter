@@ -1,7 +1,7 @@
 {
     "name": "Latino Staking Pool (LATIN)",
     "plugins": [],
-    "clients": ["twitter"],
+    "clients": ["twitter", "discord"],
     "modelProvider": "openai",
     "model": "gpt-4o-mini",
     "settings": {
