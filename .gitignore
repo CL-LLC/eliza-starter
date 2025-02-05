@@ -5,6 +5,8 @@ dist
 .env
 .env.local
 
+characters/*.character.json
+!characters/eliza.character.json
 
 node_modules
 dist/
